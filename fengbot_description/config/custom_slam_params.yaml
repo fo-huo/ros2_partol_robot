@@ -1,0 +1,18 @@
+slam_toolbox:
+  ros__parameters:
+    # 激光雷达参数
+    max_laser_range: 10.0          # 设置最大扫描距离（与传感器实际参数一致）
+    min_laser_range: 0.12          # 设置最小扫描距离（与传感器实际参数一致
+    minimum_score: 0.5             # 扫描匹配的最低得分阈值
+    resolution: 0.015               # 地图分辨率（米/像素）
+    scan_topic: /scan              # 激光雷达话题名称（默认值）
+    
+    # 其他关键参数（可选）
+    throttle_scans: 1              # 每处理N次扫描后更新一次地图
+    use_sim_time: true             # 若使用Gazebo仿真则设为true
+    # slam_params.yaml
+
+  
+    position_covariance_scale: 0.1    # 减小里程计位置权重（默认0.1）
+    orientation_covariance_scale: 0.1 # 减小里程计方向权重
+   
